@@ -40,7 +40,7 @@ Example:
 8. `endsWith`
 9. `includes`
 10. `indexOf`
-11. `lastIndexOf`
+11. `lastIndexOf`ew
 12. `padEnd`
 13. `padStart`
 14. `repeat`
