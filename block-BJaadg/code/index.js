@@ -12,7 +12,7 @@ let to = 'Arya Stark';
 2. Find the character at the index indexOfIs (Problem 1) in quote.
 */
 
-/*
+/*ee
 3. Log the message saying `The index of first is in quote is 7`
 */
 
