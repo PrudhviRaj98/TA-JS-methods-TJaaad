@@ -36,7 +36,7 @@ Example:
 2. `join`
 3. `flat`
 4. `push`
-5. `indexOf`
+5. `indexOf`ee
 6. `lastIndexOf`
 7. `includes`
 8. `reverse`
