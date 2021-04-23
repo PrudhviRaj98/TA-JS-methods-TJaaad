@@ -13,33 +13,38 @@ console.log(` ${message} is ${message.indexOf("still")} `);
 // Log the index of word "answers" in message
 console.log(` ${message} is ${message.indexOf("answers")} `);
 // Log true or false based on whether the word "answers" exist in message or not
-console.log(` ${message} is ${message.indexOf("answers")} `);
+console.log(` ${message} is ${message.indexOf("answers") !== -1} `);
 // Log true or false based on whether the word "they" exist in message or not
-console.log(` ${message} is ${message.includes("they")} `);
+console.log(` ${message} is ${message.includes("they") !== -1} `);
 // Log true or false based on whether the word "is" exist in message or not
-console.log(` ${message} is ${message.includes("they")} `);
+console.log(` ${message} is ${message.includes("they")!== -1} `);
 // Log true or false based on whether the word "Is" exist in message or not
-console.log(` ${message} is ${message.includes("Is")} `);
+console.log(` ${message} is ${message.includes("Is") == -1} `);
 // Check and log whether the word from index 3 to 6 is "you" or not (use slice)
-console.log(` ${message} is ${message.slice(3,6)} `);
+console.log(` ${message} is ${message.slice(3,6) == "you" } `);
 // Check and log whether the word from index 7 to 8 is "a" or not
-console.log(` ${message} is return ${message.slice(7,8)}`);
+console.log(` ${message} is return ${message.slice(7,8)} ==="a"`);
 // Check and log whether the last 3 character in message is "no!" or not (you can use -3 in slice)
-console.log(` ${message} is return ${message.slice(-3)}`);
+console.log(` ${message} is return ${message.slice(-3)}==="no"`);
 // Check and log whether the last 5 character in message is "no!" or not
-console.log(` ${message} is return ${message.slice(-3)}`);
+console.log(` ${message} is return ${message.slice(-3)}==="you"`);
 // Log the message variable, all in lowecase
-
+console.log(message.toUpperCase());
 // Log the message variable, all in uppercase
-
+console.log(message.toLowerCase());
 // Replace the word "are" to "can't", store it in a new variable named `newMessage` and log it.
-console.log(` ${message} is return ${message.replace("are" , "can't")}`);
+let newmwssage = console.log(` ${message} is return ${message.replace("are" , "can't")}`);
 // Replace the word "still" to "" (empty) using newMessage variable, and re-assign the output to the variable `newMessage` and log it.
 console.log(` ${message} is return ${message.replace("still" , "")}`);
 // Replace the word "thinking" to "decide" using newMessage variable, and re-assign the output to the variable `newMessage` and log it.
 console.log(` ${message} is return ${message.replace("thinking" , "decide")}`);
 // Log all the characters from the message variable (you can user for..of loop on string)
-
+for(let char of message){
+    console.log(char);
+}
 // Split all the words in message (split by " " space) and store it in a variable messageArray
-
+let messageArray = message.split(" ");
 // Log all the words of messageArray
+for(let word of messageArray){
+    console.log(word);
+}
