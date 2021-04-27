@@ -1,7 +1,13 @@
 // NOTE: You can only use the (reduce) array method to solve this exercise:
 
-function countAllPeople() {
-  // your code goes here
+function countAllPeople(arr) {
+  return arr.houses.reduce((acc,cv)=>{
+      
+      let newOne = acc.concat(cv);
+      newOne.forEach(elem => {
+        console.log(elem.people)
+      });
+  },[]);
 }
 
 function peopleByHouses() {
