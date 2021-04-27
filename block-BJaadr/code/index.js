@@ -2,40 +2,60 @@
 
 function countAllPeople(arr) {
   return arr.houses.reduce((acc,cv)=>{
-      
-      let newOne = acc.concat(cv);
-      newOne.forEach(elem => {
-        console.log(elem.people)
-      });
+      acc = acc + cv.people.length;
+      return acc
+  },0);
+}
+
+function peopleByHouses(arr) {
+  return arr.houses.reduce((acc,cv)=>{
+    console.log(cv);
+    acc[cv.name] = cv.people.length
+    return acc
+  },{});
+}
+
+function everyone(arr) {
+  return arr.houses.reduce((acc,cv)=>{
+    // console.log(cv);
+    acc = acc.concat(cv.people.map((ele)=> ele.name))
+    return acc
   },[]);
 }
 
-function peopleByHouses() {
-  // your code goes here
-}
-
-function everyone() {
-  // your code goes here
-}
-
 function nameWithS() {
-  // your code goes here
+  return arr.houses.reduce((acc,cv)=>{
+    acc = acc.concat(cv.people.map((ele)=> ele.name)).filter((nameo)=> nameo.LowerCase().includes("S"))
+    return acc
+  },[]);
 }
 
 function nameWithA() {
-  // your code goes here
+  return arr.houses.reduce((acc,cv)=>{
+    acc = acc.concat(cv.people.map((ele)=> ele.name)).filter((nameo)=> nameo.LowerCase().includes("A"))
+    return acc
+  },[]);
 }
 
 function surnameWithS() {
-  // your code goes here
+  return arr.houses.reduce((acc,cv)=>{
+    acc = acc.concat(cv.people.map((ele)=> ele.name)).filter((nameo)=> nameo.split(' ')[1].LowerCase().includes("A"))
+    return acc
+  },[]);
 }
 
 function surnameWithA() {
-  // your code goes here
+  return arr.houses.reduce((acc,cv)=>{
+    acc = acc.concat(cv.people.map((ele)=> ele.name)).filter((nameo)=> nameo.split(' ')[1].LowerCase().includes("S"))
+    return acc
+  },[]);
 }
 
 function peopleNameOfAllHouses() {
-  // your code goes here
+  return arr.houses.reduce((acc,cv)=>{
+    acc[cv] = cv.people.map((p) => p.name);
+    return acc
+  },[]);
 }
 
 // Testing your result after writing your function
