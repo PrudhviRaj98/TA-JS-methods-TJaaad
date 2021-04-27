@@ -1,35 +1,35 @@
 // NOTE: You can not use reduce methods to solve this exercise
 
-function countAllPeople() {
-  // your code goes here
+function countAllPeople(arr) {
+  return arr.map((person)=> person.name);
 }
-
+got.map((person)=>person.name);
 function peopleByHouses() {
-  // your code goes here
+  
 }
 
 function everyone() {
-  // your code goes here
+  
 }
 
 function nameWithS() {
-  // your code goes here
+  
 }
 
 function nameWithA() {
-  // your code goes here
+  
 }
 
 function surnameWithS() {
-  // your code goes here
+  
 }
 
 function surnameWithA() {
-  // your code goes here
+  
 }
 
 function peopleNameOfAllHouses() {
-  // your code goes here
+  
 }
 
 // Testing your result after writing your function
