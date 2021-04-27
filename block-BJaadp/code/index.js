@@ -16,18 +16,34 @@ let persons = [
 // NOTE: Use reduce method whereever you can to solve this exercise:
 
 // Find the average grade
+let avg = persons.map((person)=> person.grade).reduce((acc , cv)=>{
+  return acc + cv
+},0);
+let count = persons.map((person)=> person.grade)
+avg/count.length;
 
 // Find the average grade of male
+let male = persons.filter((person)=> person.sex == "M").map((elem)=>elem.grade).reduce((acc , cv)=>{
+  return acc + cv
+})
+let count = persons.map((person)=> person.grade);
+avg/count.length
 
 // Find the average grade of female
+let male = persons.filter((person)=> person.sex == "F").map((elem)=>elem.grade).reduce((acc , cv)=>{
+  return acc + cv
+})
+let count = persons.map((person)=> person.grade);
+avg/count.length
 
 // Find the highest grade
-
+let gr = persons.map((person)=> person.grade).sort((a,b)=> a-b).pop();
 // Find the highest grade in male
-
+let gr = persons.filter((person)=> person.sex == "M").map((elem)=>elem.grade).sort((a,b)=> a= b).pop();
 // Find the highest grade in female
-
+let gr = persons.filter((person)=> person.sex == "F").map((elem)=>elem.grade).sort((a,b)=> a= b).pop();
 // Find the highest grade for people whose name starts with 'J' or 'P'
+let fr = persons.filter((person)=> person.name.startsWith("J") || person.name.startsWith("P")).map((ele)=> ele.grade).sort((a,b)=>a-b).pop();
 
 const fruitBasket = [
   'banana',
@@ -51,6 +67,21 @@ that fruit has appeared in the array. Store it in new variable fruitsObj
 Output: 
 {banana: 2, cherry: 3, orange: 3, apple: 2, fig: 1}
 */
+
+let fruitsBanana = fruitBasket.filter((fruits)=>fruits == "banana").length;
+let fruitsCherry = fruitBasket.filter((fruits)=>fruits == "cherry").length;
+let fruitsOrange = fruitBasket.filter((fruits)=>fruits == "orange").length;
+let fruitsApple = fruitBasket.filter((fruits)=>fruits == "apple").length;
+let fruitsFig = fruitBasket.filter((fruits)=>fruits == "fig").length;
+
+
+
+function all (arr){
+  return arr.reduce((acc,cv)=>{
+
+  },{});
+}
+all(fruitsBanana);
 
 /* 
 
